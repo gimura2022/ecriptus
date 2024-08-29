@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "stdnoreturn.h": "c",
+        "u_common.h": "c",
+        "stdio.h": "c",
+        "stdlib.h": "c"
+    }
+}
