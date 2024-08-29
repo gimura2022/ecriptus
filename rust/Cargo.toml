@@ -17,7 +17,3 @@ panic = "abort"
 lto = "fat"
 debug-assertions = false
 incremental = false
-
-[target.x86_64-unknown-linux-gnu]
-linker = "rust-lld"
-rustflags = ["-C", "link-args=-L/zig/zig-out/lib", "-lutils_zig"]

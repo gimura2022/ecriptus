@@ -82,13 +82,5 @@ pub fn RS_Main()
         }
     }));
 
-    let result_len: i32 = unsafe {
-        extern "C" {
-            fn add(a: i32, b: i32) -> i32;
-        }
-
-        add(1i32, 10i32)
-    };
-
-    println!("Result: {result_len}")
+    println!("hallo!!!")
 }
