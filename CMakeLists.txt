@@ -36,7 +36,7 @@ if(WIN32)
     target_link_libraries(${PROJECT_NAME}
         debug "${RUST_PATH}/target/debug/${RUST_LIB_NAME}.a"
         optimized "${RUST_PATH}/target/release/${RUST_LIB_NAME}.a"
-        ws2_32 userenv advapi32 ntdll kernel32 user32 hal gcc
+        ws2_32 userenv advapi32 ntdll
     )
 else()
     target_link_libraries(${PROJECT_NAME}
