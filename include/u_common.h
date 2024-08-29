@@ -21,6 +21,13 @@ typedef size_t usize;
 typedef float  f32;
 typedef double f64;
 
+enum {
+    E_SUCCESS = 0,
+    E_RUST_PANIC = -1,
+};
+
+extern i32 com_errno;
+
 noreturn void COM_Die(const char* format, ...);
 
 #endif
