@@ -29,5 +29,8 @@ enum {
 extern i32 com_errno;
 
 noreturn void COM_Die(const char* format, ...);
+noreturn void COM_DieNoFormat(const char* format);
+
+void COM_SetComErrno(i32 val);
 
 #endif

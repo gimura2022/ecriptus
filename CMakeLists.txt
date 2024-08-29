@@ -11,7 +11,6 @@ set(SRC       "${SRC_PATH}/src")
 set(INCLUDE   "${SRC_PATH}/include")
 
 include_directories(${INCLUDE})
-add_executable(${PROJECT_NAME} ${SRC}/main.c)
 
 set(RUST_PATH "${CMAKE_SOURCE_DIR}/rust")
 set(RUST_LIB_NAME "libecriptus_rust")
@@ -30,6 +29,7 @@ ExternalProject_Add(
     LOG_BUILD ON
 )
 
+add_executable(${PROJECT_NAME} ${SRC}/main.c ${SRC}/u_common.c)
 add_dependencies(${PROJECT_NAME} rust)
 
 if(WIN32)
