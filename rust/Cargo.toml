@@ -5,5 +5,15 @@ edition = "2021"
 
 [lib]
 crate-type = ["staticlib"]
+path = "src/root.rs"
 
 [dependencies]
+
+[profile.release]
+opt-level = 3
+overflow-checks = true
+debug = false
+panic = "abort"
+lto = "fat"
+debug-assertions = false
+incremental = false

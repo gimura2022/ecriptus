@@ -25,6 +25,7 @@ if [ -d "build" ]; then
     cd build
     if [ -f "./ecripus" ]; then
         chmod +x ./ecripus
+        clear
         ./ecripus
     else
         echo "ecripus не найден"
