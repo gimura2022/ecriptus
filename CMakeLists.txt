@@ -14,7 +14,7 @@ include_directories(${INCLUDE})
 add_executable(${PROJECT_NAME} ${SRC}/main.c)
 
 set(RUST_PATH "${CMAKE_SOURCE_DIR}/rust")
-set(RUST_LIB_NAME "ecriptus_rust")
+set(RUST_LIB_NAME "libecriptus_rust")
 
 set_directory_properties(PROPERTIES EP_PREFIX ${CMAKE_BINARY_DIR}/rust)
 
@@ -34,9 +34,9 @@ add_dependencies(${PROJECT_NAME} rust)
 
 if(WIN32)
     target_link_libraries(${PROJECT_NAME}
-        debug "${RUST_PATH}/target/debug/${RUST_LIB_NAME}.lib"
-        optimized "${RUST_PATH}/target/release/${RUST_LIB_NAME}.lib"
-        ws2_32 userenv advapi32 ntdll m
+        debug "${RUST_PATH}/target/debug/${RUST_LIB_NAME}.a"
+        optimized "${RUST_PATH}/target/release/${RUST_LIB_NAME}.a"
+        ws2_32 userenv advapi32 ntdll kernel32 user32 hal gcc
     )
 else()
     target_link_libraries(${PROJECT_NAME}
